@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos | Isaac Nshuti</title>
+    <link rel="stylesheet" href="style.css?v=4">
+</head>
+<body>
+    <div id="loader-wrapper"><div class="loader"></div></div>
+    <div class="background-glow"></div>
+
+    <nav>
+        <div class="logo">NSHUTI.SEC</div>
+        <div class="menu-toggle">☰</div>
+        <div class="nav-links">
+            <a href="index.html"><span class="fr">Accueil</span><span class="en">Home</span></a>
+            <a href="projects.html"><span class="fr">Projets</span><span class="en">Projects</span></a>
+            <a href="about.html" class="active"><span class="fr">À Propos</span><span class="en">About</span></a>
+            <a href="contact.html"><span class="fr">Contact</span><span class="en">Contact</span></a>
+            <span class="nav-separator">|</span>
+            <button id="lang-btn" onclick="toggleLanguage()">EN 🇬🇧</button>
+        </div>
+    </nav>
+
+    <div class="container animate-on-load">
+        <h2><span class="fr">Profil Professionnel</span><span class="en">Professional Profile</span></h2>
+        
+        <div class="grid">
+            <div class="card">
+                <h3><span class="fr">Mon Approche</span><span class="en">My Approach</span></h3>
+                <p><span class="fr">Sécurité et Code.</span><span class="en">Security & Code.</span></p>
+            </div>
+            <div class="card">
+                <h3><span class="fr">Objectif</span><span class="en">Goal</span></h3>
+                <p><span class="fr">Défis techniques.</span><span class="en">Technical challenges.</span></p>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 60px;"><span class="fr">Stack Technique</span><span class="en">Tech Stack</span></h2>
+        <div class="grid">
+            <div class="card"><h3>Cybersecurity</h3><p>SOC Analysis, SIEM, Wireshark, Threat Modeling.</p></div>
+            <div class="card"><h3>Development</h3><p>Django, React Native, Swift, Kotlin.</p></div>
+            <div class="card"><h3>Ops</h3><p>Linux, Bash, Docker, Git.</p></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
