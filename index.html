@@ -4,86 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isaac Nshuti | Security Architect</title>
-    <link rel="stylesheet" href="style.css?v=5">
+    <link rel="stylesheet" href="style.css?v=16">
 
     <style>
         @media screen and (max-width: 768px) {
-            /* 1. LE BURGER */
-            .menu-toggle {
-                display: block !important;
-                position: fixed !important;
-                top: 25px !important;
-                right: 20px !important;
-                z-index: 10000 !important;
-                color: white !important;
-                font-size: 2rem !important;
-            }
-
-            /* 2. LE MENU PLEIN ÉCRAN */
-            .nav-links {
-                position: fixed !important;
-                top: 0 !important;
-                left: 0 !important;
-                width: 100vw !important; /* Largeur TOTALE */
-                height: 100vh !important; /* Hauteur TOTALE */
-                background-color: #020617 !important; /* Noir opaque */
-                
-                display: flex !important;
-                flex-direction: column !important;
-                justify-content: center !important;
-                align-items: center !important;
-                
-                /* Animation */
-                transform: translateX(100%) !important;
-                transition: transform 0.3s ease-in-out !important;
-                z-index: 9990 !important;
-            }
-
-            /* 3. QUAND LE MENU EST OUVERT */
-            .nav-links.nav-active {
-                transform: translateX(0) !important;
-            }
-
-            /* 4. LES LIENS (GROS ET BLANCS) */
-            .nav-links a {
-                display: block !important;
-                font-size: 2rem !important;
-                margin: 20px 0 !important;
-                color: #ffffff !important; /* BLANC */
-                opacity: 1 !important;
-                text-decoration: none !important;
-            }
-
-            /* 5. CACHER/AFFICHER LES AUTRES ÉLÉMENTS */
+            .menu-toggle { display: block !important; position: fixed !important; top: 25px !important; right: 20px !important; z-index: 10000 !important; color: white !important; font-size: 2rem !important; cursor: pointer; }
+            .nav-links { position: fixed !important; top: 0 !important; left: 0 !important; width: 100vw !important; height: 100vh !important; background-color: #020617 !important; display: flex !important; flex-direction: column !important; justify-content: center !important; align-items: center !important; transform: translateX(100%) !important; transition: transform 0.3s ease-in-out !important; z-index: 9990 !important; }
+            .nav-links.nav-active { transform: translateX(0) !important; }
+            .nav-links a { display: block !important; font-size: 2rem !important; margin: 20px 0 !important; color: #ffffff !important; opacity: 1 !important; text-decoration: none !important; }
             .nav-separator { display: none !important; }
-            
-            #lang-btn {
-                margin-top: 30px !important;
-                border: 1px solid #38bdf8 !important;
-                padding: 10px 30px !important;
-                color: white !important;
-                display: block !important;
-                font-size: 1.2rem !important;
-            }
+            #lang-btn { margin-top: 30px !important; border: 1px solid #38bdf8 !important; padding: 10px 30px !important; color: white !important; display: block !important; font-size: 1.2rem !important; }
         }
     </style>
 </head>
 <body>
-
     <div id="loader-wrapper"><div class="loader"></div></div>
     <div class="background-glow"></div>
 
     <nav>
         <div class="logo">NSHUTI.SEC</div>
-        
         <div class="menu-toggle">☰</div>
-
         <div class="nav-links">
             <a href="index.html" class="active"><span class="fr">Accueil</span><span class="en">Home</span></a>
             <a href="projects.html"><span class="fr">Projets</span><span class="en">Projects</span></a>
             <a href="about.html"><span class="fr">À Propos</span><span class="en">About</span></a>
             <a href="contact.html"><span class="fr">Contact</span><span class="en">Contact</span></a>
-            
             <span class="nav-separator">|</span>
             <button id="lang-btn" onclick="toggleLanguage()">EN 🇬🇧</button>
         </div>
@@ -97,7 +42,7 @@
 
         <h1>ISAAC NSHUTI</h1>
 
-        <p class="hero-text">
+        <p class="hero-text reveal">
             <span class="fr">
                 Je transforme la cybersécurité en un levier de performance. 
                 En fusionnant <strong>l'analyse défensive (SOC)</strong> et le <strong>développement sécurisé (DevSecOps)</strong>, je conçois des architectures numériques résilientes.
@@ -108,7 +53,7 @@
             </span>
         </p>
         
-        <div style="margin-top: 40px;">
+        <div class="reveal" style="margin-top: 40px;">
             <a href="projects.html" class="btn btn-primary">
                 <span class="fr">Voir mon Portfolio</span><span class="en">View Portfolio</span>
             </a>

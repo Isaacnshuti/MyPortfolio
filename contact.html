@@ -3,11 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projets | Isaac Nshuti</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Contact | Isaac Nshuti</title>
+    <link rel="stylesheet" href="style.css?v=16">
+    
+    <style>
+        @media screen and (max-width: 768px) {
+            .menu-toggle { display: block !important; position: fixed !important; top: 25px !important; right: 20px !important; z-index: 10000 !important; color: white !important; font-size: 2rem !important; cursor: pointer; }
+            .nav-links { position: fixed !important; top: 0 !important; left: 0 !important; width: 100vw !important; height: 100vh !important; background-color: #020617 !important; display: flex !important; flex-direction: column !important; justify-content: center !important; align-items: center !important; transform: translateX(100%) !important; transition: transform 0.3s ease-in-out !important; z-index: 9990 !important; }
+            .nav-links.nav-active { transform: translateX(0) !important; }
+            .nav-links a { display: block !important; font-size: 2rem !important; margin: 20px 0 !important; color: #ffffff !important; opacity: 1 !important; text-decoration: none !important; }
+            .nav-separator { display: none !important; }
+            #lang-btn { margin-top: 30px !important; border: 1px solid #38bdf8 !important; padding: 10px 30px !important; color: white !important; display: block !important; font-size: 1.2rem !important; }
+        }
+    </style>
 </head>
 <body>
-
     <div id="loader-wrapper"><div class="loader"></div></div>
     <div class="background-glow"></div>
 
@@ -16,111 +26,36 @@
         <div class="menu-toggle">☰</div>
         <div class="nav-links">
             <a href="index.html"><span class="fr">Accueil</span><span class="en">Home</span></a>
-            <a href="projects.html" class="active"><span class="fr">Projets</span><span class="en">Projects</span></a>
+            <a href="projects.html"><span class="fr">Projets</span><span class="en">Projects</span></a>
             <a href="about.html"><span class="fr">À Propos</span><span class="en">About</span></a>
-            <a href="contact.html"><span class="fr">Contact</span><span class="en">Contact</span></a>
+            <a href="contact.html" class="active"><span class="fr">Contact</span><span class="en">Contact</span></a>
             <span class="nav-separator">|</span>
             <button id="lang-btn" onclick="toggleLanguage()">EN 🇬🇧</button>
         </div>
     </nav>
 
     <div class="container animate-on-load">
-        
-        <h2 style="text-align:center; margin-bottom: 50px;">
-            <span class="fr">Réalisations Techniques</span>
-            <span class="en">Technical Projects</span>
+        <h2 class="reveal" style="text-align: center; margin-bottom: 50px;">
+            <span class="fr">Parlons de votre projet</span><span class="en">Let's Discuss Your Project</span>
         </h2>
-        
-        <div class="grid">
-            
-            <div class="card" style="border-left: 5px solid #9b59b6;">
-                <h3>KivuZoom</h3>
-                <p style="color: #9b59b6; font-weight: bold; font-size: 0.9rem;">Smart Mobility & Delivery</p>
-                <p>
-                    <span class="fr">Plateforme tout-en-un connectant clients et chauffeurs (Motos/Voitures) pour le transport et la livraison.</span>
-                    <span class="en">All-in-one platform connecting clients with drivers (Bikes/Cars) for transport and delivery.</span>
-                </p>
-                <p style="margin-top:15px; font-size: 0.85rem; color: var(--text-muted);">Tech: <strong>React Native</strong>, Node.js, Google Maps API</p>
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 50px;">
+            <div class="card reveal" style="border-left: 5px solid var(--primary);">
+                <h3><span class="fr">Contact Direct</span><span class="en">Direct Contact</span></h3>
+                <p><span class="fr">Réponse sous 24h.</span><span class="en">Reply within 24h.</span></p>
+                <a href="mailto:nshutiisaac96@gmail.com" class="btn btn-secondary" style="width: 100%; box-sizing: border-box; text-align: center; margin-bottom: 15px;">nshutiisaac96@gmail.com</a>
+                <a href="https://www.linkedin.com/in/nshuti-isaac-881b53322" target="_blank" class="btn btn-primary" style="width: 100%; box-sizing: border-box; text-align: center;">LinkedIn</a>
             </div>
-
-            <div class="card" style="border-left: 5px solid #3bad4b;">
-                <h3>YacuBike</h3>
-                <p style="color: #3bad4b; font-weight: bold; font-size: 0.9rem;">Moto-Taxi App</p>
-                <p>
-                    <span class="fr">Application dédiée aux motos-taxis. Système de tracking en temps réel et paiement mobile sécurisé.</span>
-                    <span class="en">Dedicated app for moto-taxis. Real-time tracking system and secure mobile payment.</span>
-                </p>
-                <p style="margin-top:15px; font-size: 0.85rem; color: var(--text-muted);">Tech: <strong>Kotlin (Android)</strong>, Firebase, Geo-Location</p>
-            </div>
-
-            <div class="card" style="border-left: 5px solid #ff9f43;">
-                <h3>RwandaCare</h3>
-                <p style="color: #ff9f43; font-weight: bold; font-size: 0.9rem;">iOS Health App</p>
-                <p>
-                    <span class="fr">Application mobile native pour faciliter l'accès aux soins. Interface sécurisée respectant les standards médicaux.</span>
-                    <span class="en">Native mobile application to facilitate access to healthcare. Secure interface complying with medical standards.</span>
-                </p>
-                <p style="margin-top:15px; font-size: 0.85rem; color: var(--text-muted);">Tech: <strong>Swift</strong>, SwiftUI, iOS SDK</p>
-            </div>
-
-            <div class="card" style="border-left: 5px solid #38bdf8;">
-                <h3>GomaTrafic</h3>
-                <p style="color: var(--primary); font-weight: bold; font-size: 0.9rem;">Fullstack Solution</p>
-                <p>
-                    <span class="fr">Système de gestion des amendes routières. Backend robuste pour traiter les transactions et API REST.</span>
-                    <span class="en">Traffic fine management system. Robust backend to process transactions and REST API.</span>
-                </p>
-                <p style="margin-top:15px; font-size: 0.85rem; color: var(--text-muted);">Tech: Python (Django), PostgreSQL, REST API</p>
-            </div>
-
-            <div class="card" style="border-left: 5px solid #e74c3c;">
-                <h3>Secure Task Manager</h3>
-                <p style="color: #e74c3c; font-weight: bold; font-size: 0.9rem;">Secure Web App</p>
-                <p>
-                    <span class="fr">Application intégrant le chiffrement des données sensibles (AES) et une authentification forte.</span>
-                    <span class="en">Application integrating sensitive data encryption (AES) and strong authentication.</span>
-                </p>
-                <p style="margin-top:15px; font-size: 0.85rem; color: var(--text-muted);">Tech: Django Security, Encryption, RBAC</p>
-            </div>
-
-            <div class="card" style="border-left: 5px solid #f1c40f;">
-                <h3>Cyber Awareness</h3>
-                <p style="color: #f1c40f; font-weight: bold; font-size: 0.9rem;">Security Analysis</p>
-                <p>
-                    <span class="fr">Rapport d'analyse technique sur les vecteurs d'attaque (Phishing, Ingénierie Sociale).</span>
-                    <span class="en">Technical analysis report on attack vectors (Phishing, Social Engineering).</span>
-                </p>
-                <p style="margin-top:15px; font-size: 0.85rem; color: var(--text-muted);">Domain: Risk Analysis, OSINT, Reporting</p>
-            </div>
-            
-        </div>
-        
-        <h2 style="margin-top: 80px; text-align: center;">
-            <span class="fr">Projets Futurs & R&D</span>
-            <span class="en">Future Projects & R&D</span>
-        </h2>
-        
-        <div class="grid">
-            <div class="card" style="background: rgba(129, 140, 248, 0.1); border-style: dashed;">
-                <h3>Next-Gen SIEM Lab</h3>
-                <p style="color: var(--secondary); font-weight: bold; font-size: 0.9rem;">Blue Team Defense</p>
-                <p>
-                    <span class="fr">Déploiement d'un environnement ELK Stack pour centraliser les logs et détecter les intrusions réseaux.</span>
-                    <span class="en">Deployment of an ELK Stack environment to centralize logs and detect network intrusions.</span>
-                </p>
-            </div>
-            <div class="card" style="background: rgba(129, 140, 248, 0.1); border-style: dashed;">
-                <h3>System Hardening Automation</h3>
-                <p style="color: var(--secondary); font-weight: bold; font-size: 0.9rem;">DevSecOps</p>
-                <p>
-                    <span class="fr">Création de scripts automatisés pour auditer et durcir les configurations des serveurs Linux.</span>
-                    <span class="en">Creation of automated scripts to audit and harden Linux server configurations.</span>
-                </p>
+            <div class="card reveal">
+                <h3><span class="fr">Message Rapide</span><span class="en">Quick Message</span></h3>
+                <form>
+                    <div style="margin-bottom: 20px;"><input type="text" placeholder="Nom / Name" style="width: 100%; padding: 12px; background: rgba(2,6,23,0.5); border: 1px solid #334155; color: white; border-radius: 5px;"></div>
+                    <div style="margin-bottom: 20px;"><input type="email" placeholder="Email" style="width: 100%; padding: 12px; background: rgba(2,6,23,0.5); border: 1px solid #334155; color: white; border-radius: 5px;"></div>
+                    <div style="margin-bottom: 20px;"><textarea rows="4" placeholder="Message..." style="width: 100%; padding: 12px; background: rgba(2,6,23,0.5); border: 1px solid #334155; color: white; border-radius: 5px;"></textarea></div>
+                    <button type="button" class="btn btn-primary" style="width:100%; border:none;">Send</button>
+                </form>
             </div>
         </div>
-
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>

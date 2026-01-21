@@ -4,7 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>À Propos | Isaac Nshuti</title>
-    <link rel="stylesheet" href="style.css?v=4">
+    <link rel="stylesheet" href="style.css?v=16">
+    
+    <style>
+        @media screen and (max-width: 768px) {
+            .menu-toggle { display: block !important; position: fixed !important; top: 25px !important; right: 20px !important; z-index: 10000 !important; color: white !important; font-size: 2rem !important; cursor: pointer; }
+            .nav-links { position: fixed !important; top: 0 !important; left: 0 !important; width: 100vw !important; height: 100vh !important; background-color: #020617 !important; display: flex !important; flex-direction: column !important; justify-content: center !important; align-items: center !important; transform: translateX(100%) !important; transition: transform 0.3s ease-in-out !important; z-index: 9990 !important; }
+            .nav-links.nav-active { transform: translateX(0) !important; }
+            .nav-links a { display: block !important; font-size: 2rem !important; margin: 20px 0 !important; color: #ffffff !important; opacity: 1 !important; text-decoration: none !important; }
+            .nav-separator { display: none !important; }
+            #lang-btn { margin-top: 30px !important; border: 1px solid #38bdf8 !important; padding: 10px 30px !important; color: white !important; display: block !important; font-size: 1.2rem !important; }
+        }
+    </style>
 </head>
 <body>
     <div id="loader-wrapper"><div class="loader"></div></div>
@@ -24,24 +35,28 @@
     </nav>
 
     <div class="container animate-on-load">
-        <h2><span class="fr">Profil Professionnel</span><span class="en">Professional Profile</span></h2>
-        
+        <h2 class="reveal"><span class="fr">Profil Professionnel</span><span class="en">Professional Profile</span></h2>
         <div class="grid">
-            <div class="card">
+            <div class="card reveal">
                 <h3><span class="fr">Mon Approche</span><span class="en">My Approach</span></h3>
-                <p><span class="fr">Sécurité et Code.</span><span class="en">Security & Code.</span></p>
+                <p><span class="fr">Je combine le développement logiciel et la sécurité offensive/défensive.</span><span class="en">I bridge the gap between software development and offensive/defensive security.</span></p>
             </div>
-            <div class="card">
+            <div class="card reveal">
                 <h3><span class="fr">Objectif</span><span class="en">Goal</span></h3>
-                <p><span class="fr">Défis techniques.</span><span class="en">Technical challenges.</span></p>
+                <p><span class="fr">Je recherche des défis techniques pour innover et protéger.</span><span class="en">I am seeking technical challenges to innovate and protect.</span></p>
             </div>
         </div>
-
-        <h2 style="margin-top: 60px;"><span class="fr">Stack Technique</span><span class="en">Tech Stack</span></h2>
+        <h2 class="reveal" style="margin-top: 60px;"><span class="fr">Stack Technique</span><span class="en">Tech Stack</span></h2>
         <div class="grid">
-            <div class="card"><h3>Cybersecurity</h3><p>SOC Analysis, SIEM, Wireshark, Threat Modeling.</p></div>
-            <div class="card"><h3>Development</h3><p>Django, React Native, Swift, Kotlin.</p></div>
-            <div class="card"><h3>Ops</h3><p>Linux, Bash, Docker, Git.</p></div>
+            <div class="card reveal">
+                <h3>Cybersecurity</h3><p>SOC Analysis, SIEM (ELK), Wireshark, Incident Response.</p>
+            </div>
+            <div class="card reveal">
+                <h3>Development</h3><p>Python (Django), React Native, Kotlin (Android), Swift (iOS).</p>
+            </div>
+            <div class="card reveal">
+                <h3>Systems & Ops</h3><p>Linux Administration, Bash Scripting, Docker, Git.</p>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
